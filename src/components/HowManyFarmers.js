@@ -30,7 +30,7 @@ class HowManyFarmers extends React.Component {
                     </Form>
                 </div>
                 <ClickMe onClick={this.handleClick}>
-                    {!this.state.visible == 'panel' ? 'Slide up' : 'Click me!'}
+                    {!this.state.visible == 'panel' ? 'Slide up' : 'Send a crop report'}
                 </ClickMe>
             </div>
         );

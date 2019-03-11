@@ -67,7 +67,7 @@ class Location extends Component {
                             this.state.region
                         }`}
                         type="submit"
-                        name="Submit"
+                        name="view pests"
                         country={this.state.country}
                         region={this.state.region}
                     />

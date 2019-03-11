@@ -1,0 +1,12 @@
+Git Bash for Windows
+
+In directory:
+npm run dev
+
+In browser:
+localhost:1234
+
+Node for Windows
+
+In directory:
+node src/server.js

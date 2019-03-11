@@ -33,7 +33,8 @@ class Pest extends React.Component {
                 <Title />
                 <Header name={pestName} />
                 <div id="container">
-                    <ul>
+                    <button className="back-button" onClick={function() { window.history.back(); }}>Back</button>
+					<ul>
                         {jsonSheet.map((e, key) => {
                             e.countryISO =
                                 e.CountryISO === 'GH'
@@ -49,28 +50,28 @@ class Pest extends React.Component {
                                 e.PestScientificName === pestName
                             ) {
                                 return (
-                                    <li key={key}>
+                                    
+									<li key={key}>
                                         <PestCommonHeader>
                                             Common Name:{' '}
                                             {e.CommonName.toUpperCase()}{' '}
                                         </PestCommonHeader>
-                                        <br />
                                         <p>
                                             <b> Crop affected: </b> {e.Crop}
                                         </p>
                                         <br />
                                         {Object.values(e.Images[0]).map(
                                             (image, key) => (
-                                                <div key={key}>
+                                                <figure key={key}>
                                                     <PestImg src={image.url} />
-                                                    <p>
-                                                        <b>Identify by: </b><br />
+                                                    <figcaption>
                                                         {image.Caption}
-                                                    </p>
-                                                </div>
+                                                    </figcaption>
+                                                </figure>
                                             )
                                         )}
-                                        <p>
+                                        
+										{/*<p>
                                             <b> Country/Region: </b>
                                             {e.CountryISO === 'GH'
                                                 ? 'Ghana'
@@ -79,39 +80,47 @@ class Pest extends React.Component {
                                                 : e.CountryISO === 'ZM'
                                                 ? 'Zambia'
                                                 : ''}
+                                        </p>*/}
+                                        <p>
+                                            <b> Prevention: </b> {e.Prevention.split("\n").map((i,key) => {
+																		return <div key={key}>{i}</div>;
+																	})}
                                         </p>
                                         <br />
                                         <p>
-                                            <b> Prevention: </b> {e.Prevention}
+                                            <b> Monitoring: </b> {e.Monitoring.split("\n").map((i,key) => {
+																		return <div key={key}>{i}</div>;
+																	})}
                                         </p>
                                         <br />
-                                        <p>
-                                            <b> Monitoring: </b> {e.Monitoring}
-                                        </p>
-                                        <br />
-                                        <b>
-                                            Direct Control with restrictions:{' '}
-                                        </b>
-                                        <br />
-                                        <p>
-                                            {
-                                                e[
-                                                    'Direct Control with restrictions'
-                                                ]
-                                            }
-                                        </p>
-                                        <br />
+										<p>
                                         <b>
                                             Direct Control without restrictions:{' '}
                                         </b>
-                                        <br />
-                                        <p>
+                                        
                                             {
                                                 e[
                                                     'Direct Control without restrictions'
-                                                ]
+                                                ].split("\n").map((i,key) => {
+																		return <div key={key}>{i}</div>;
+																	})
                                             }
                                         </p>
+                                        <br />
+                                        <p>
+                                        <b>
+                                            Direct Control with restrictions:{' '}
+                                        </b>
+                                            {
+                                                e[
+                                                    'Direct Control with restrictions'
+                                                ].split("\n").map((i,key) => {
+																		return <div key={key}>{i}</div>;
+																	})
+                                            }
+                                        </p>
+										<br />
+                                        
                                     </li>
                                 );
                             }

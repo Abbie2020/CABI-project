@@ -6,10 +6,10 @@ import { CropboxWrap, ChooseACrop, LocationInfo } from './styledComponents';
 const CropBox = props => (
     <CropboxWrap>
         <LocationInfo>
-            You are in {props.country}, {props.region}.{' '}
-            <Link to="/">Change location</Link>
+            <h2>You are in {props.region}{', '} {props.country}{" "}
+            <br /><Link to="/">change location</Link></h2>
         </LocationInfo>
-        <ChooseACrop>Can't identify the pest? Choose a crop:</ChooseACrop>
+	{/*<ChooseACrop>Can't identify the pest? Choose a crop:</ChooseACrop>
         <CropButton
             country={props.country}
             region={props.region}
@@ -27,7 +27,7 @@ const CropBox = props => (
             region={props.region}
             crop="Maize"
             route={`/${props.country}/${props.region}/Maize`}
-        />
+        />*/}
     </CropboxWrap>
 );
 

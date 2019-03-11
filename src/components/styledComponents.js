@@ -4,7 +4,7 @@ const ButtonContianer = styled.button`
     /* flex: 0 0 100%; */
     text-align: center;
     font-family: 'Open Sans', sans-serif;
-    font-size: 1.4em;
+ {/*   font-size: 1.4em;	*/}
     padding: 1em;
     color: white;
     text-transform: uppercase;
@@ -12,10 +12,11 @@ const ButtonContianer = styled.button`
     margin: 1em;
     border-radius: 0.5em;
     bottom: 2em;
-    background: black;
+    background: #007367;
 
     &:hover {
-        background: #368729;
+        background: #cd4400;
+		cursor: pointer;
     }
 `;
 
@@ -33,7 +34,7 @@ const ClickMe = styled.button`
     left: 0.5em;
     width: 98%;
     font-family: 'Open Sans', sans-serif;
-    font-size: 1.8em;
+{/*    font-size: 1.8em;	*/}
     font-weight: bold;
     background: white;
     padding: 0.6em;
@@ -50,6 +51,7 @@ const CropboxWrap = styled.div`
     justify-content: center;
     align-items: center;
     width: 80%;
+	text-align: center;
 `;
 
 const CropCommonHeader = styled.h4`
@@ -59,7 +61,6 @@ const CropCommonHeader = styled.h4`
 
 const PestImg = styled.img`
     flex: 0 0 1;
-    padding: 1em;
     min-width: 460px;
     min-height: 190px;
     width: auto;
@@ -67,12 +68,12 @@ const PestImg = styled.img`
 `;
 
 const LocationInfo = styled.p`
-    font-size: 2em;
+{/*    font-size: 2em;	*/}
     margin-top: 3em;
 `;
 
 const CropButtonLink = styled.button`
-    background: black;
+    background: #007367;
     font-family: 'Open Sans', sans-serif;
     font-size: 2em;
     padding: 1em;
@@ -83,10 +84,13 @@ const CropButtonLink = styled.button`
 
     &:hover {
         background: #cd4400;
+		cursor: pointer;
     }
 `;
 
-const DashWrap = styled.div``;
+const DashWrap = styled.div`
+	
+`;
 
 const FormWrap = styled.div`
     display: flex;
@@ -108,7 +112,7 @@ const Form = styled.iframe`
 const DropdownWrap = styled.div`
     text-align: center;
     font-family: 'Open Sans', sans-serif;
-    font-size: 1em;
+{/*    font-size: 1em;	*/}
     padding: 0.2em;
     margin: 1em;
     position: relative;
@@ -117,6 +121,7 @@ const DropdownWrap = styled.div`
 const PestCommonHeader = styled.h4`
     font-size: 1.2em;
     color: black;
+
 `;
 
 const PestBoxWrapper = styled.div`
@@ -140,31 +145,28 @@ const PestBoxContainer = styled.div`
 const PestButtonName = styled.h3`
     text-align: center;
     flex: 0 0 100%;
-    font-size: 2.4em;
+{/*    font-size: 2.4em;	*/}
 `;
 
 const PestButtonWrap = styled.div`
     flex-direction: row;
     text-align: center;
     font-family: 'Open Sans', sans-serif;
-    font-size: 1.2em;
+{/*    font-size: 1.2em;	*/}
     padding: 0.6em;
     color: white;
     box-sizing: border-box;
+
 `;
 
 const PestButtonContainer = styled.button`
     border-radius: 0.8em;
-    width: 24em;
-    background: #ffffff;
-    border: 0.3em double #cd4400;
+    width: 12em;
+    background: #d3d3d3;
+    border: 0.5em single #007367;
 
     &:hover {
-        border: 0.3em solid black;
-    }
-
-    &:hover {
-        border: 0.3em solid black;
+        background: darkgray;
     }
 `;
 
@@ -183,7 +185,7 @@ const RiskBar = styled.p`
     color: ${props => (props.level === 2 ? 'black' : 'white')};
     border-radius: 20px;
     padding: 0.5em;
-    font-size: 1.8em;
+{/*    font-size: 1.8em;  */}
     font-weight: bold;
     margin: 1em 2em;
     text-align: center;
@@ -199,25 +201,26 @@ const Loading = styled.div`
 
 const SelectLocationHead = styled.h1`
     text-align: center;
-    font-size: 3em;
-    margin-top: 4em;
+    font-size: 2em;
+    margin-top: 2em;
 `;
 
 const TitleContainer = styled.div`
     display: flex;
     width: 100%;
-    justify-content: flex-end;
+    justify-content: center;
+	padding-top: 2em;
 `;
 
 const TitleImage = styled.img`
-    min-width: 100%;
-    min-width: 18em;
+    min-width: 25%;
+{/*    min-width: 18em;	*/}
 `;
 
 const CropNameHeader = styled.h2`
     padding-top: 1em;
     text-align: center;
-    font-size: 2.6em;
+{/*    font-size: 2.6em;	*/}
     flex: 0 0 100%;
     color: black;
 `;
